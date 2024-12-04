@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectors and Properties</title>
+  <style>
+    .class-selector {
+      color: #007BFF;
+      font-size: 20px;
+    }
+
+    #id-selector {
+      color: #FF5733;
+      font-weight: bold;
+    }
+
+    div.group-selector, div.universal-selector * {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <p class="class-selector">This is styled using a class selector.</p>
+  <p id="id-selector">This is styled using an ID selector.</p>
+  <div class="group-selector">This is a group selector example.</div>
+  <div class="universal-selector">
+    <p>Targeted using a universal selector.</p>
+  </div>
+</body>
+</html>
