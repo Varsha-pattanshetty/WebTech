@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control Structures and Logic</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+  </style>
+</head>
+<body>
+  <h1>Control Structures and Logic</h1>
+  <button id="checkEvenOdd">Check if Even or Odd</button>
+  <p id="result"></p>
+
+  <script>
+    document.getElementById("checkEvenOdd").addEventListener("click", function() {
+      const number = 7; // Example number
+      let resultText = "";
+
+      // Using if-else to check even or odd
+      if (number % 2 === 0) {
+        resultText = "The number is even.";
+      } else {
+        resultText = "The number is odd.";
+      }
+
+      document.getElementById("result").innerText = resultText;
+    });
+  </script>
+</body>
+</html>

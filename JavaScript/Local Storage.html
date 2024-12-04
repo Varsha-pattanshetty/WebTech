@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Storage</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+  </style>
+</head>
+<body>
+  <h1>Local Storage</h1>
+  <input type="text" id="username" placeholder="Enter your name">
+  <button id="saveName">Save Name</button>
+  <button id="loadName">Load Name</button>
+  <p id="savedName"></p>
+
+  <script>
+    document.getElementById("saveName").addEventListener("click", function() {
+      const username = document.getElementById("username").value;
+      localStorage.setItem("username", username);
+      alert("Name saved to localStorage!");
+    });
+
+    document.getElementById("loadName").addEventListener("click", function() {
+      const storedName = localStorage.getItem("username");
+      document.getElementById("savedName").innerText = storedName ? `Saved Name: ${storedName}` : "No name saved.";
+    });
+  </script>
+</body>
+</html>

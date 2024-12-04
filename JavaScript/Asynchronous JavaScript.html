@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asynchronous JavaScript</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+  </style>
+</head>
+<body>
+  <h1>Asynchronous JavaScript</h1>
+  <button id="fetchData">Fetch Data</button>
+  <p id="output"></p>
+
+  <script>
+    document.getElementById("fetchData").addEventListener("click", function() {
+      fetch('https://jsonplaceholder.typicode.com/posts/1')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById("output").innerText = `Title: ${data.title}`;
+        })
+        .catch(error => {
+          document.getElementById("output").innerText = `Error: ${error}`;
+        });
+    });
+  </script>
+</body>
+</html>

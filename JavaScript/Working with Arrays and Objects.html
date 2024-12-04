@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays and Objects</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+  </style>
+</head>
+<body>
+  <h1>Arrays and Objects</h1>
+  <button id="arrayExample">Array Example</button>
+  <button id="objectExample">Object Example</button>
+  <p id="output"></p>
+
+  <script>
+    // Array example
+    const numbers = [1, 2, 3, 4, 5];
+
+    document.getElementById("arrayExample").addEventListener("click", () => {
+      const doubledNumbers = numbers.map(num => num * 2);
+      document.getElementById("output").innerText = `Doubled numbers: ${doubledNumbers}`;
+    });
+
+    // Object example
+    const person = {
+      name: "Alice",
+      age: 30,
+      greet() { return `Hello, my name is ${this.name}`; }
+    };
+
+    document.getElementById("objectExample").addEventListener("click", () => {
+      document.getElementById("output").innerText = person.greet();
+    });
+  </script>
+</body>
+</html>

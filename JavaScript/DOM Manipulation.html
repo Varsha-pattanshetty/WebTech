@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Manipulation</title>
+  <style>
+    .hidden { display: none; }
+    .visible { display: block; }
+  </style>
+</head>
+<body>
+  <h1>DOM Manipulation</h1>
+  <button id="toggleButton">Toggle Modal</button>
+  <div id="modal" class="hidden">
+    <div>
+      <p>This is a modal!</p>
+      <button id="closeButton">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const toggleButton = document.getElementById("toggleButton");
+    const modal = document.getElementById("modal");
+    const closeButton = document.getElementById("closeButton");
+
+    toggleButton.addEventListener("click", () => {
+      modal.classList.toggle("hidden");
+      modal.classList.toggle("visible");
+    });
+
+    closeButton.addEventListener("click", () => {
+      modal.classList.add("hidden");
+      modal.classList.remove("visible");
+    });
+  </script>
+</body>
+</html>

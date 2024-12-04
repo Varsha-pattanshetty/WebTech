@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basics and Syntax</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .output { font-size: 20px; color: green; }
+  </style>
+</head>
+<body>
+  <h1>Basics and Syntax</h1>
+  <button id="showValue">Show Value</button>
+  <p class="output" id="output"></p>
+
+  <script>
+    // Declaring variables
+    let name = "John Doe";
+    const age = 25;
+
+    // Function definition
+    function showInfo() {
+      document.getElementById("output").innerText = `Name: ${name}, Age: ${age}`;
+    }
+
+    document.getElementById("showValue").addEventListener("click", showInfo);
+  </script>
+</body>
+</html>
